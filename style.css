@@ -7,12 +7,12 @@ body {
    box-sizing: border-box;
    font-family: 'Montserrat', sans-serif;
 }
-.container {
+.thecontainer {
    width: 100px;
    height: 100px;
    display: flex;
 }
-.fields {
+.thefields {
    width: 30px;
    border-right: 1px solid black;
    display: flex;
