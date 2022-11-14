@@ -21,9 +21,9 @@ class Message {
 class Messenger {
     messages = [];
     show_history() {
-        let msg_hist = [];
-        this.messages.forEach(msg => msg_hist.push(msg.toHtml()));
-        return msg_hist;
+        let message_history = [];
+        this.messages.forEach(msg => message_history.push(msg.toHtml()));
+        return message_history;
     }
     send(author, text) {
         this.messages.push(new Message(author, text))
@@ -32,8 +32,8 @@ class Messenger {
 let messenger = new Messenger();
 const author = document.querySelector('#name');
 const message = document.querySelector('#message');
-const sendBtn = document.querySelector('.btn-send');
-const showHistory = document.querySelector('.btn-show');
+const sendButton = document.querySelector('.button-send');
+const showHistory = document.querySelector('.button-show');
 sendBtn.addEventListener('click', () => {
     let name = author.value;
     let text = message.value;
@@ -45,5 +45,5 @@ showHistory.addEventListener('click', () => {
     history.innerHTML = messenger.show_history();
 });
 // messenger.send(' Artem', 'the first message')
-// messenger.send('мария', 'the second message')
+// messenger.send('Maria', 'the second message')
 // messenger.show_history()
